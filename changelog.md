@@ -14,12 +14,13 @@
 
 # Alpha Build 1
 
-### 0.0.1
+### 1.0.0
 
 - All previous files removed for full rewrite
 - Changed version stored to 1.0.0
 - Added setting for tax type
-- Tax types set to `Debuff` or `Ghost`
+- Added settings option to change tax type
+- Tax type options `Debuff` or `Ghost`
 - Tax type defauly set to 0 (`Debuff`)
 - Added setting for stacking
 - Stacking default set to 3 (`Either`)
@@ -32,3 +33,22 @@
 - Added function `.config` (settings menu)
 - Added title text to settings menu
 - Added tax type switch to settings menu
+
+### 1.0.1
+
+- Added settings option to change debuff stacking type
+- Debuff stacking options `Off`, `New Debuff`, `Add Time`, or `Either`
+- Added settings option to change debuff time
+- Added settings option to change maximum debuff time
+
+### 1.0.2
+
+- Added ability to switch between debuff stacking options
+- Added stacking option to change ghost stacking type
+- Ghost stacking options `Off`, `Reset`, or `Add Time`
+- Added ability to switch between ghost stacking options
+- Added settings option to change ghost time
+- Added settings option to change maximum ghost time
+- Added failsafe for if stacking option is set higher than available when switching to ghost
+
+### 1.1.0

@@ -1,0 +1,2 @@
+scoreboard players set #deathtax.setting deathtax.settings.stacking 1
+function deathtax:.config
