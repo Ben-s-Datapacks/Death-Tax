@@ -1,0 +1,2 @@
+scoreboard players operation @s deathtax.timer.weakness += #deathtax.setting deathtax.settings.timeAdd
+execute unless score #deathtax.setting deathtax.settings.maxTime matches -1 if score @s deathtax.timer.weakness > #deathtax.setting deathtax.settings.maxTime run scoreboard players operation @s deathtax.timer.weakness = #deathtax.setting deathtax.settings.maxTime

@@ -2,4 +2,4 @@
 - [ ] Ghosting
 - [ ] Ghost Reviving
 - [ ] End Debuff
-- [ ] Settings
+- [x] Settings

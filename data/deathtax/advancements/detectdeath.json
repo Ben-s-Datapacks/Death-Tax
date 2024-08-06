@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "deathtax.detect": {
+              "deathtax.detectDeath": {
                 "min": 1
               }
             }

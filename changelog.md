@@ -52,3 +52,6 @@
 - Added failsafe for if stacking option is set higher than available when switching to ghost
 
 ### 1.1.0
+
+- Added player death detection
+- Added function to start player ghosting
