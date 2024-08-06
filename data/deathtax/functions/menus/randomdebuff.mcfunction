@@ -1,0 +1,11 @@
+execute if score #deathtax deathtax.settings.stackingTax matches 0 if entity @s[tag=deathtax.weakness,tag=deathtax.fatigue,tag=deathtax.slowness,tag=deathtax.hunger] run return run tellraw @s {"text": "Could not apply new debuff because you already have all possible debuffs! Skill issue?","color": "red"}
+execute if score #deathtax deathtax.settings.stackingTax matches 1 if entity @s[tag=deathtax.weakness,tag=deathtax.fatigue,tag=deathtax.slowness,tag=deathtax.hunger] run return run tellraw @s {"text": "Could not apply new debuff because you already have all possible debuffs! Skill issue?","color": "red"}
+tellraw @s [{"text": "You will receive a random debuff for the next ","color": "red"},{"score":{"name": "#deathtax","objective": "deathtax.settings.debuffTime"},"color": "red"},{"text": " seconds","color": "red"}]
+tellraw @s [{"text": "Run ","color": "gray"},{"text": "/trigger deathtax.timeremainingtoggle","color": "dark_aqua","hoverEvent": {"action": "show_text","contents": {"text": "Click to run","color": "dark_aqua"}},"clickEvent": {"action": "suggest_command","value": "/trigger deathtax.timeremainingtoggle"}},{"text": " to see time remaining","color": "gray"}]
+execute if score #deathtax deathtax.settings.removeDebuff matches 1 run tellraw @s [{"text": "ITEM can be used to remove the debuff early","color": "gray"}]
+function deathtax:applytax/effecttaxrandom
+#Make sure if time is added, time doesn't go over maximum
+execute if score @s deathtax.weaknessTime > #deathtax deathtax.settings.debuffMaxTime run scoreboard players operation @s deathtax.weaknessTime = #deathtax deathtax.settings.debuffMaxTime
+execute if score @s deathtax.fatigueTime > #deathtax deathtax.settings.debuffMaxTime run scoreboard players operation @s deathtax.fatigueTime = #deathtax deathtax.settings.debuffMaxTime
+execute if score @s deathtax.slownessTime > #deathtax deathtax.settings.debuffMaxTime run scoreboard players operation @s deathtax.slownessTime = #deathtax deathtax.settings.debuffMaxTime
+execute if score @s deathtax.hungerTime > #deathtax deathtax.settings.debuffMaxTime run scoreboard players operation @s deathtax.hungerTime = #deathtax deathtax.settings.debuffMaxTime

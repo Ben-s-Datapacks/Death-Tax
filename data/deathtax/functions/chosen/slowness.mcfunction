@@ -1,0 +1,6 @@
+tag @s add deathtax.slowness
+tellraw @s [{"text": "You will receive ","color": "red","bold": false},{"text": "slowness","color": "#8BAFE0","bold": true},{"text": " for the next ","color": "red","bold": false},{"score":{"name": "#deathtax","objective": "deathtax.settings.debuffTime"},"color": "red","bold": false},{"text": " seconds.","color": "red","bold": false}]
+tellraw @s [{"text": "Run ","color": "gray"},{"text": "/trigger deathtax.timeremainingtoggle","color": "dark_aqua","hoverEvent": {"action": "show_text","contents": {"text": "Click to run","color": "dark_aqua"}},"clickEvent": {"action": "suggest_command","value": "/trigger deathtax.timeremainingtoggle"}},{"text": " to see time remaining","color": "gray"}]
+execute if score #deathtax deathtax.settings.removeDebuff matches 1 run tellraw @s [{"text": "ITEM can be used to remove the debuff early","color": "gray"}]
+scoreboard players operation @s deathtax.slownessTime = #deathtax deathtax.settings.debuffTime
+scoreboard players reset @s deathtax.selection

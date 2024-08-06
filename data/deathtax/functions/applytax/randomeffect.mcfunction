@@ -1,0 +1,4 @@
+execute if predicate deathtax:25chance run return run tag @s add deathtax.weakness
+execute if predicate deathtax:50chance run return run tag @s add deathtax.fatigue
+execute if predicate deathtax:66chance run return run tag @s add deathtax.slowness
+return run tag @s add deathtax.hunger

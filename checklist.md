@@ -1,0 +1,6 @@
+- [ ] Random Debuff
+- [ ] Chosen Debuff
+- [ ] Ghosting
+- [ ] Ghost Reviving
+- [ ] End Debuff
+- [ ] Settings
