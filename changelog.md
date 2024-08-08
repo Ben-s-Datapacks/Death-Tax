@@ -55,3 +55,50 @@
 
 - Added player death detection
 - Added function to start player ghosting
+
+### 1.1.1
+
+- Renamed stacking option to timeStacking
+- Added setting for debuff stacking
+- Fixed Ghost tax settings menu
+
+### 1.1.2
+
+- Fixed misspelling in ghost settings
+- Added more information to tax type information
+- Fixed time stack switching functions
+
+### 1.1.3
+
+- Fixed Debuff tax settings menu
+- Added option to change debuff stacking
+
+### 1.1.4
+
+- Fixed switching between ghost and debuff taxes while in debuff menu
+- Redid the information for debuff time and debuff max time
+
+### 1.1.5
+
+- Made debuff stacking setting functional
+
+### 1.1.6
+
+- Actually made debuff stacking setting functional
+
+### 1.1.7
+
+- Made the settings menu not change height between
+
+### 1.1.8
+
+- Fixed ghosting (I hope)
+
+### 1.1.9
+
+- Actually changed the tag so it'll work
+
+### 1.1.10
+
+- Finished ghosting
+- Fixed player not being put back into survival

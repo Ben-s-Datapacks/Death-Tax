@@ -1,5 +1,5 @@
 - [ ] Random Debuff
-- [ ] Ghosting
+- [x] Ghosting
 - [ ] Ghost Reviving
 - [ ] End Debuff
 - [x] Settings

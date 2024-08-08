@@ -1,0 +1,1 @@
+#Make sure if stacking is enabled an effect can be applied

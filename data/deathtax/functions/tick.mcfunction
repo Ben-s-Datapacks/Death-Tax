@@ -1,2 +1,2 @@
-execute as @a[tag=deathtax.ghost] run function deathtax:increment/ghost
+execute as @a[tag=deathtax.weakness] run function deathtax:increment/weakness
 schedule function deathtax:tick 1s replace
