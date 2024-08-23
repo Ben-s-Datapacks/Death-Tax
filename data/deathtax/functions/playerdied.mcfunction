@@ -3,8 +3,8 @@ scoreboard players reset @s deathtax.detectDeath
 advancement revoke @s only deathtax:detectdeath
 
 #Tell player they died (add insult to injury)
-title @s[tag=!global.ignore.gui] title {"text": "You Died","color": "red"}
-title @s[tag=!global.ignore.gui] subtitle {"text": "Check your for chat next steps","color": "green"}
+title @s[tag=!global.ignore.gui,tag=!global.ignore] title {"text": "You Died","color": "red"}
+title @s[tag=!global.ignore.gui,tag=!global.ignore] subtitle {"text": "Check your for chat next steps","color": "green"}
 
 #Set timer based off settings
 execute if score #deathtax.setting deathtax.settings.taxType matches 0 run return run function deathtax:debufftax

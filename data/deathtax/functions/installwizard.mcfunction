@@ -1,5 +1,5 @@
 #Add version data to storage
-data merge storage versionstrings:deathtax {branch: "Alpha", version: 1.1.10}
+data merge storage versionstrings:deathtax {branch: "Alpha", version: 1.2.0}
 #Add scoreboard objectives for data storing
 scoreboard objectives add deathtax.settings.taxType dummy
 scoreboard objectives add deathtax.settings.timeStacking dummy

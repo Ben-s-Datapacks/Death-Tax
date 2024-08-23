@@ -102,3 +102,8 @@
 
 - Finished ghosting
 - Fixed player not being put back into survival
+
+### 1.2.0
+
+- Added increments for debuffs
+- Added removals for debuffs
