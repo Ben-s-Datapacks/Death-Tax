@@ -6,10 +6,20 @@ advancement revoke @s only deathtax:detectdeath
 title @s[tag=!global.ignore.gui,tag=!global.ignore] title {"text": "You Died","color": "red"}
 title @s[tag=!global.ignore.gui,tag=!global.ignore] subtitle {"text": "Check your for chat next steps","color": "green"}
 
-#Set timer based off settings
-execute if score #deathtax.setting deathtax.settings.taxType matches 0 run return run function deathtax:debufftax
-execute if score #deathtax.setting deathtax.settings.taxType matches 1 run return run function deathtax:ghosttax
+#If there is no stacking, only add a debuff if none is applied
+execute if score #deathtax.setting deathtax.settings.debuffStacking matches 0 if score #deathtax.setting deathtax.settings.timeStacking matches 0 if entity @s[tag=!deathtax.weakness,tag=!deathtax.fatigue,tag=!deathtax.slowness,tag=!deathtax.hunger] run return run function deathtax:debuff/anyeffect
 
-#Throw exception if above does not work
-tellraw @s {"text": "An exception has occured! deathtax:playerdied, #deathtax.setting deathtax.settings.taxType was not 0 or 1. Report this readout to an admin.","color": "red"}
-return fail
+#Time Stacking: Reset, Debuff Stacking: False
+execute if score #deathtax.setting deathtax.settings.debuffStacking matches 0 if score #deathtax.setting deathtax.settings.timeStacking matches 1 run return run function deathtax:debuff/resetrandom
+
+#Time Stacking: Add Time, Debuff Stacking: False
+execute if score #deathtax.setting deathtax.settings.debuffStacking matches 0 if score #deathtax.setting deathtax.settings.timeStacking matches 2 run return run function deathtax:debuff/increaserandom
+
+#Time Stacking: Off, Debuff Stacking: True
+execute if score #deathtax.setting deathtax.settings.debuffStacking matches 1 if score #deathtax.setting deathtax.settings.timeStacking matches 0 run return run function deathtax:debuff/newrandom
+
+#Time Stacking: Reset, Debuff Stacking: True
+execute if score #deathtax.setting deathtax.settings.debuffStacking matches 1 if score #deathtax.setting deathtax.settings.timeStacking matches 1 run return run function deathtax:debuff/resetornewrandom
+
+#Time Stacking: Add Time, Debuff Stacking: True
+execute if score #deathtax.setting deathtax.settings.debuffStacking matches 1 if score #deathtax.setting deathtax.settings.timeStacking matches 2 run return run function deathtax:debuff/increaseornewrandom

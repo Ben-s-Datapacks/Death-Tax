@@ -1,7 +1,0 @@
-#Run proper commands depending on stacking set
-execute if score #deathtax.setting deathtax.settings.debuffStacking matches 0 if score #deathtax.setting deathtax.settings.timeStacking matches 0 if entity @s[tag=!deathtax.weakness,tag=!deathtax.fatigue,tag=!deathtax.slowness,tag=!deathtax.hunger] run return run function deathtax:debuff/new
-execute if score #deathtax.setting deathtax.settings.debuffStacking matches 0 if score #deathtax.setting deathtax.settings.timeStacking matches 1 run return run function deathtax:unknown
-execute if score #deathtax.setting deathtax.settings.debuffStacking matches 0 if score #deathtax.setting deathtax.settings.timeStacking matches 2 run return run function deathtax:unknown
-execute if score #deathtax.setting deathtax.settings.debuffStacking matches 1 if score #deathtax.setting deathtax.settings.timeStacking matches 0 run return run function deathtax:unknown
-execute if score #deathtax.setting deathtax.settings.debuffStacking matches 1 if score #deathtax.setting deathtax.settings.timeStacking matches 1 run return run function deathtax:unknown
-execute if score #deathtax.setting deathtax.settings.debuffStacking matches 1 if score #deathtax.setting deathtax.settings.timeStacking matches 2 run return run function deathtax:unknown

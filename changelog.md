@@ -107,3 +107,12 @@
 
 - Added increments for debuffs
 - Added removals for debuffs
+
+### 1.3.0
+
+- Removed the ability to ghost
+- Split ITEM affect into Time Affect and Debuff Affect
+
+### 1.3.1
+
+- Adding a new effect on death should now hopefully work
