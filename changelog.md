@@ -127,3 +127,7 @@
 - Added functionality to time stack reset or debuff stacking on
 - Added functionality to time stack increase or debuff stacking on
 - Added error code if playerdied.mcfunction doesn't run
+
+### 1.3.3
+
+- Made effects other than weakness functional

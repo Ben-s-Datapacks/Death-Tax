@@ -1,5 +1,5 @@
 #Add version data to storage
-data merge storage versionstrings:deathstax {branch: "Alpha", version: 1.3.2}
+data merge storage versionstrings:deathstax {branch: "Alpha", version: 1.3.3}
 #Set settings defaults
 scoreboard players set #deathstax.setting deathstax.settings.timeStacking 1
 scoreboard players set #deathstax.setting deathstax.settings.debuffStacking 1
