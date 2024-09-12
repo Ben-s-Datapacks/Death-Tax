@@ -1,4 +1,5 @@
-execute if predicate deathstax:25chance run return run tag @s add deathstax.weakness
-execute if predicate deathstax:50chance run return run tag @s add deathstax.fatigue
-execute if predicate deathstax:75chance run return run tag @s add deathstax.slowness
+execute store result score #deathstax.random deathstax.settings.timeAdd run random value 0..3
+execute if score #deathstax.random deathstax.settings.timeAdd matches 0 run return run tag @s add deathstax.weakness
+execute if score #deathstax.random deathstax.settings.timeAdd matches 1 run return run tag @s add deathstax.fatigue
+execute if score #deathstax.random deathstax.settings.timeAdd matches 2 run return run tag @s add deathstax.slowness
 tag @s add deathstax.hunger

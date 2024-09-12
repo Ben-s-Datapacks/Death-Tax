@@ -10,6 +10,7 @@ scoreboard objectives add deathstax.timer.weakness dummy
 scoreboard objectives add deathstax.timer.hunger dummy
 scoreboard objectives add deathstax.timer.fatigue dummy
 scoreboard objectives add deathstax.timer.slowness dummy
-#Update/add data if pack was updated/installed
-execute unless data storage versionstrings:deathstax {branch: "Alpha", version: "1.3.1",previouslyInstalled:1b} run function deathstax:installwizard
+#Make constant for player timer decrement
+scoreboard players set #deathstax.const deathstax.timer.weakness 1
+execute unless data storage versionstrings:deathstax {branch: "Alpha", version: 1.3.2} run function deathstax:installwizard
 schedule function deathstax:tick 1s replace
