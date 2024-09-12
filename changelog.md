@@ -131,3 +131,20 @@
 ### 1.3.3
 
 - Made effects other than weakness functional
+
+### 1.3.4
+
+- Informs the player what effect they're receiving and for how long
+- Informs the player what effect has had its time reset
+- Informs the player what effect has had its time increased and to what
+
+### 1.3.5
+
+- Fixed duplicate messages
+- Fixed messages not sending
+- Fixed the player possibly getting their timer reset on top of adding a new effect
+- Added ability to see time remaining
+
+### 1.3.6
+
+- Added ability to see current settings

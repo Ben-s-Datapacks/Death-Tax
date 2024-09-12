@@ -3,7 +3,7 @@ scoreboard players reset @s deathstax.detectDeath
 advancement revoke @s only deathstax:detectdeath
 
 #Tell player they died (add insult to injury)
-title @s[tag=!global.ignore.gui,tag=!global.ignore] title {"text": "You Died","color": "red"}
+title @s[tag=!global.ignore.gui,tag=!global.ignore] title {"text": "You Died","color": "red","bold": true}
 title @s[tag=!global.ignore.gui,tag=!global.ignore] subtitle {"text": "Check your for chat next steps","color": "dark_red"}
 
 #Apply a new effect if user currently has none. Also acts as an option when debuff stacking and time stacking are disabled

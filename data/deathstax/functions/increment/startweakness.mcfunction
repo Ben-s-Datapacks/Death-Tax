@@ -1,2 +1,4 @@
 scoreboard players operation @s deathstax.timer.weakness = #deathstax.setting deathstax.settings.timeAdd
 tag @s add deathstax.weakness
+tellraw @s [{"text": "You will receive ","color": "gray","italic": true},{"text": "weakness","color": "dark_gray","italic": true},{"text": " for the next ","color": "gray","italic": true},{"score":{"name": "#deathstax.setting","objective": "deathstax.settings.timeAdd"},"color": "gray","italic": true},{"text": " seconds...","color": "gray","italic": true}]
+tellraw @s [{"text": "Run ","color": "gray","italic": true,"underlined": false},{"text": "/trigger deathstax.toggletimers","color": "blue","underlined": true,"italic": true,"hoverEvent": {"action": "show_text","contents": {"text": "Click to run"}},"clickEvent": {"action": "run_command","value": "/trigger deathstax.toggletimers"}},{"text": " to see the time remaining on your tax...","color": "gray","underlined": false,"italic": true}]

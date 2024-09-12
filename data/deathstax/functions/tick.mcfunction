@@ -2,4 +2,9 @@ execute as @a[tag=deathstax.weakness] run function deathstax:increment/weakness
 execute as @a[tag=deathstax.fatigue] run function deathstax:increment/fatigue
 execute as @a[tag=deathstax.slowness] run function deathstax:increment/slowness
 execute as @a[tag=deathstax.hunger] run function deathstax:increment/hunger
+execute as @a[tag=!deathstax.weakness,tag=!deathstax.fatigue,tag=!deathstax.slowness,tag=!deathstax.hunger,scores={deathstax.toggletimers=1..}] run function deathstax:removetimers
+execute as @a[scores={deathstax.toggletimers=1..}] run function deathstax:toggletimers
+execute as @a[tag=deathstax.showtimers] run title @s actionbar [{"text": "Weakness: ","color": "white"},{"score":{"name": "@s","objective": "deathstax.timer.weakness"},"color": "aqua"},{"text": " | Mining Fatigue: ","color": "white"},{"score":{"name": "@s","objective": "deathstax.timer.fatigue"},"color": "aqua"},{"text": " | Slowness: ","color": "white"},{"score":{"name": "@s","objective": "deathstax.timer.slowness"},"color": "aqua"},{"text": " | Hunger: ","color": "white"},{"score":{"name": "@s","objective": "deathstax.timer.hunger"},"color": "aqua"}]
+scoreboard players enable @a deathstax.viewsettings
+execute as @a[scores={deathstax.viewsettings=1..}] run function deathstax:viewsettings
 schedule function deathstax:tick 1s replace
