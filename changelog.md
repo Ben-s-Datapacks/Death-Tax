@@ -116,3 +116,14 @@
 ### 1.3.1
 
 - Adding a new effect on death should now hopefully work
+
+### 1.3.2
+
+- Changed debuff/anyeffect to use the random command instead of predicates
+- Changed debuff incrementals to test for range instead of testing for constant variable
+- Changed debuff/newrandom to use the random command instead of predicates
+- Added functionality to time stack reset and debuff stack off
+- Added functionality to time stack add and debuff stack off
+- Added functionality to time stack reset or debuff stacking on
+- Added functionality to time stack increase or debuff stacking on
+- Added error code if playerdied.mcfunction doesn't run
