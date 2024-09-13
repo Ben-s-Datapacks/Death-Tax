@@ -1,2 +1,2 @@
-scoreboard players set #deathstax.setting deathstax.settings.timeStacking 0
+scoreboard players set deathstax.setting.timeStack deathstax.settings 0
 function deathstax:.config

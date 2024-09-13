@@ -1,2 +1,2 @@
-scoreboard players set #deathstax.setting deathstax.settings.debuffStacking 0
+scoreboard players set deathstax.setting.debuffStack deathstax.settings 0
 function deathstax:.config

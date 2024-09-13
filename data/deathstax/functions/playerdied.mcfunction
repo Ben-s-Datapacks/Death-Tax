@@ -10,18 +10,18 @@ title @s[tag=!global.ignore.gui,tag=!global.ignore] subtitle {"text": "Check you
 execute if entity @s[tag=!deathstax.weakness,tag=!deathstax.fatigue,tag=!deathstax.slowness,tag=!deathstax.hunger] run return run function deathstax:debuff/anyeffect
 
 #Time Stacking: Reset, Debuff Stacking: False
-execute if score #deathstax.setting deathstax.settings.debuffStacking matches 0 if score #deathstax.setting deathstax.settings.timeStacking matches 1 run return run function deathstax:debuff/resetcurrent
+execute if score deathstax.setting.debuffStack deathstax.settings matches 0 if score deathstax.setting.timeStack deathstax.settings matches 1 run return run function deathstax:debuff/resetcurrent
 
 #Time Stacking: Add Time, Debuff Stacking: False
-execute if score #deathstax.setting deathstax.settings.debuffStacking matches 0 if score #deathstax.setting deathstax.settings.timeStacking matches 2 run return run function deathstax:debuff/increasecurrent
+execute if score deathstax.setting.debuffStack deathstax.settings matches 0 if score deathstax.setting.timeStack deathstax.settings matches 2 run return run function deathstax:debuff/increasecurrent
 
 #Time Stacking: Off, Debuff Stacking: True
-execute if score #deathstax.setting deathstax.settings.debuffStacking matches 1 if score #deathstax.setting deathstax.settings.timeStacking matches 0 run return run function deathstax:debuff/newrandom
+execute if score deathstax.setting.debuffStack deathstax.settings matches 1 if score deathstax.setting.timeStack deathstax.settings matches 0 run return run function deathstax:debuff/newrandom
 
 #Time Stacking: Reset, Debuff Stacking: True
-execute if score #deathstax.setting deathstax.settings.debuffStacking matches 1 if score #deathstax.setting deathstax.settings.timeStacking matches 1 run return run function deathstax:debuff/resetornewrandom
+execute if score deathstax.setting.debuffStack deathstax.settings matches 1 if score deathstax.setting.timeStack deathstax.settings matches 1 run return run function deathstax:debuff/resetornewrandom
 
 #Time Stacking: Add Time, Debuff Stacking: True
-execute if score #deathstax.setting deathstax.settings.debuffStacking matches 1 if score #deathstax.setting deathstax.settings.timeStacking matches 2 run return run function deathstax:debuff/increaseornewrandom
+execute if score deathstax.setting.debuffStack deathstax.settings matches 1 if score deathstax.setting.timeStack deathstax.settings matches 2 run return run function deathstax:debuff/increaseornewrandom
 
 tellraw @s [{"text":"Uh oh! something went wrong! Please report this to an admin or to the ","color": "red","underlined": false},{"text":"Death's Tax Issue Tracker","color": "blue","underlined": true,"clickEvent": {"action": "open_url","value": "https://github.com/Ben-s-Datapacks/Deaths-Tax/issues"}},{"text":"!\nError Code:\n","color": "red","underlined": false},{"text":"IN NAMESPACE {deathstax} WITH FILE FORMAT {function} AT LOCATION {debuff/playerdied}. EXCEPTION THROWN: COULD NOT EXECUTE ANY DEBUFF APPLICATION","color": "white","underlined": false}]

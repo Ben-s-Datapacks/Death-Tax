@@ -1,5 +1,5 @@
-execute store result score #deathstax.random deathstax.settings.timeAdd run random value 0..3
-execute if score #deathstax.random deathstax.settings.timeAdd matches 0 run return run function deathstax:increment/resetweakness
-execute if score #deathstax.random deathstax.settings.timeAdd matches 1 run return run function deathstax:increment/resetfatigue
-execute if score #deathstax.random deathstax.settings.timeAdd matches 2 run return run function deathstax:increment/resetslowness
+execute store result score #deathstax.random deathstax.settings run random value 0..3
+execute if score #deathstax.random deathstax.settings matches 0 run return run function deathstax:increment/resetweakness
+execute if score #deathstax.random deathstax.settings matches 1 run return run function deathstax:increment/resetfatigue
+execute if score #deathstax.random deathstax.settings matches 2 run return run function deathstax:increment/resetslowness
 function deathstax:increment/resethunger

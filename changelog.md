@@ -148,3 +148,12 @@
 ### 1.3.6
 
 - Added ability to see current settings
+
+### 1.4.0
+
+- Removed all settings scoreboard objectives
+- Created scoreboard objective deathstax.settings
+- Renamed all "player" scores for settings data to be their respective setting (i.e. deathstax.setting.addTime)
+- Fixed bug where Maximum Time wouldn't show disabled if Time Stacking was set to anything other than Add Time
+- Specify difference between first install and installing an updated version
+- Uninstallation function
