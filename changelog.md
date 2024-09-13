@@ -149,6 +149,8 @@
 
 - Added ability to see current settings
 
+# Beta Build 1
+
 ### 1.4.0
 
 - Removed all settings scoreboard objectives
