@@ -1,5 +1,4 @@
-#Reset death 
-scoreboard players reset @s deathstax.detectDeath
+#Reset death
 advancement revoke @s only deathstax:detectdeath
 
 #Tell player they died (add insult to injury)
