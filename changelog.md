@@ -159,3 +159,7 @@
 - Fixed bug where Maximum Time wouldn't show disabled if Time Stacking was set to anything other than Add Time
 - Specify difference between first install and installing an updated version
 - Uninstallation function
+
+### 1.4.1
+- Removed death detection score
+- Changed advancement criteria to detect player death instead of ticking
