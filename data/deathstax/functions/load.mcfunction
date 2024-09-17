@@ -1,6 +1,5 @@
 #Add scoreboard objectives for data storing
 scoreboard objectives add deathstax.settings dummy
-scoreboard objectives add deathstax.detectDeath minecraft.custom:minecraft.deaths
 scoreboard objectives add deathstax.timer.weakness dummy
 scoreboard objectives add deathstax.timer.hunger dummy
 scoreboard objectives add deathstax.timer.fatigue dummy
