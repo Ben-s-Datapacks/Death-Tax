@@ -161,5 +161,13 @@
 - Uninstallation function
 
 ### 1.4.1
+
 - Removed death detection score
 - Changed advancement criteria to detect player death instead of ticking
+- Removed hunger as possible effect
+
+### 1.4.2
+
+- Removed advancement death detection
+- Readded scoreboard objective to detect a player death
+- Changed messages to say "mining fatigue" instead of just "fatigue"

@@ -1,12 +1,12 @@
 #Reset death
-advancement revoke @s only deathstax:detectdeath
+scoreboard players reset @s deathstax.detectdeath
 
 #Tell player they died (add insult to injury)
 title @s[tag=!global.ignore.gui,tag=!global.ignore] title {"text": "You Died","color": "red","bold": true}
 title @s[tag=!global.ignore.gui,tag=!global.ignore] subtitle {"text": "Check your for chat next steps","color": "dark_red"}
 
 #Apply a new effect if user currently has none. Also acts as an option when debuff stacking and time stacking are disabled
-execute if entity @s[tag=!deathstax.weakness,tag=!deathstax.fatigue,tag=!deathstax.slowness,tag=!deathstax.hunger] run return run function deathstax:debuff/anyeffect
+execute if entity @s[tag=!deathstax.weakness,tag=!deathstax.fatigue,tag=!deathstax.slowness] run return run function deathstax:debuff/anyeffect
 
 #Time Stacking: Reset, Debuff Stacking: False
 execute if score deathstax.setting.debuffStack deathstax.settings matches 0 if score deathstax.setting.timeStack deathstax.settings matches 1 run return run function deathstax:debuff/resetcurrent
