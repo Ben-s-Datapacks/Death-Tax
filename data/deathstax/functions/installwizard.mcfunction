@@ -4,8 +4,6 @@ data merge storage versionstrings:deathstax {previouslyinstalled:1b}
 #Set settings defaults
 scoreboard players set deathstax.setting.timeStack deathstax.settings 1
 scoreboard players set deathstax.setting.debuffStack deathstax.settings 1
-scoreboard players set deathstax.setting.itemTime deathstax.settings 0
-scoreboard players set deathstax.setting.itemDebuff deathstax.settings 0
 scoreboard players set deathstax.setting.addTime deathstax.settings 3600
 scoreboard players set deathstax.setting.maxTime deathstax.settings 14400
 

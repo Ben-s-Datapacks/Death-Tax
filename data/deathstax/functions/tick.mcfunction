@@ -4,7 +4,7 @@ execute as @a[tag=deathstax.fatigue] run function deathstax:increment/fatigue
 execute as @a[tag=deathstax.slowness] run function deathstax:increment/slowness
 
 #Remove the ability to see timers when not affected by a tax
-execute as @a[tag=!deathstax.weakness,tag=!deathstax.fatigue,tag=!deathstax.slowness,scores={deathstax.toggletimers=1..}] run function deathstax:removetimers
+execute as @a[tag=!deathstax.weakness,tag=!deathstax.fatigue,tag=!deathstax.slowness,tag=deathstax.showtimers] run function deathstax:removetimers
 
 #Switch timer modes
 execute as @a[scores={deathstax.toggletimers=1..}] run function deathstax:toggletimers
